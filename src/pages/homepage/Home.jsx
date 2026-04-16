@@ -17,8 +17,14 @@ export default function Home() {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-[60vh]">
-        <span className="loading loading-spinner text-green-600"></span>
+      // <div className="flex justify-center items-center h-[60vh]">
+      //   <span className="loading loading-spinner text-green-600"></span>
+      // </div>
+
+      <div className="flex justify-center items-center h-[60vh] text-green-900">
+          <span class="spinner-2 relative inline-block w-12 h-12 border-2 border-[#244D3F] rounded-full animate-spin">
+        <div class="absolute left-1/2 top-0 w-[3px] h-6 bg-[#244D3F] transform -translate-x-1/2 rounded"></div>
+      </span>
       </div>
     );
   }

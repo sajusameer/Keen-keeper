@@ -33,7 +33,11 @@ export default function FriendDetails() {
     toast.success(`${type} with ${friend.name} added!`);
   };
 
-  if (!friend) return <p className="text-center mt-10">Loading...</p>;
+  if (!friend) return <div className="flex justify-center items-center h-[60vh] text-green-900">
+          <span class="spinner-2 relative inline-block w-12 h-12 border-2 border-[#244D3F] rounded-full animate-spin">
+        <div class="absolute left-1/2 top-0 w-[3px] h-6 bg-[#244D3F] transform -translate-x-1/2 rounded"></div>
+      </span>
+      </div>;
 
   const statusStyle = {
     "overdue": "bg-red-500 text-white",
