@@ -8,12 +8,12 @@ Keen-Keeper is a simple and clean web application designed to help users maintai
 
 
 🚀 Technologies Used
-React.js
-React Router DOM
-Tailwind CSS
-Recharts
-React Icons
-React Toastify
+React.js,
+React Router DOM,
+Tailwind CSS,
+Recharts,
+React Icons,
+React Toastify,
 Daisy UI
 
 ✨ Key Features
