@@ -2,8 +2,10 @@ import React from 'react';
 
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { FaPhone, FaComment, FaVideo } from "react-icons/fa";
+import { FaComment, FaVideo, FaArchive } from "react-icons/fa";
 import { toast } from "react-toastify";
+import { LuBellRing } from 'react-icons/lu';
+import { MdAddCall, MdDeleteForever } from 'react-icons/md';
 
 export default function FriendDetails() {
   const { id } = useParams();
@@ -18,32 +20,33 @@ export default function FriendDetails() {
       });
   }, [id]);
 
-  // 🔥 timeline add function
+  
   const handleAction = (type) => {
-    const newEntry = {
-      id: Date.now(),
-      type,
-      name: friend.name,
-      date: new Date().toLocaleDateString()
-    };
+                    const newEntry = {
+                    id: Date.now(),
+                    type,
+                    name: friend.name,
+                    date: new Date().toLocaleDateString()
+                    };
 
-    const prev = JSON.parse(localStorage.getItem("timeline")) || [];
-    localStorage.setItem("timeline", JSON.stringify([newEntry, ...prev]));
+                    const prev = JSON.parse(localStorage.getItem("timeline")) || [];
+                    localStorage.setItem("timeline", JSON.stringify([newEntry, ...prev]));
+                    
 
-    toast.success(`${type} with ${friend.name} added!`);
-  };
+                    toast.success(`${type} with ${friend.name} added!`);
+                };
 
-  if (!friend) return <div className="flex justify-center items-center h-[60vh] text-green-900">
-          <span class="spinner-2 relative inline-block w-12 h-12 border-2 border-[#244D3F] rounded-full animate-spin">
-        <div class="absolute left-1/2 top-0 w-[3px] h-6 bg-[#244D3F] transform -translate-x-1/2 rounded"></div>
-      </span>
-      </div>;
+                if (!friend) return <div className="flex justify-center items-center h-[60vh] text-green-900">
+                        <span class="spinner-2 relative inline-block w-12 h-12 border-2 border-[#244D3F] rounded-full animate-spin">
+                        <div class="absolute left-1/2 top-0 w-[3px] h-6 bg-[#244D3F] transform -translate-x-1/2 rounded"></div>
+                    </span>
+                    </div>;
 
-  const statusStyle = {
-    "overdue": "bg-red-500 text-white",
-    "almost due": "bg-yellow-400 text-white",
-    "on-track": "bg-green-600 text-white",
-  };
+                const statusStyle = {
+                    "overdue": "bg-red-500 text-white",
+                    "almost due": "bg-yellow-400 text-white",
+                    "on-track": "bg-green-600 text-white",
+                };
 
   return (
     <div className="max-w-6xl mx-auto px-4 mt-10 grid md:grid-cols-3 gap-6">
@@ -76,9 +79,16 @@ export default function FriendDetails() {
 
         {/* Buttons */}
         <div className="mt-4 space-y-2">
-          <button className="w-full bg-gray-100 py-2 rounded">⏰ Snooze 2 Weeks</button>
-          <button className="w-full bg-gray-100 py-2 rounded">📦 Archive</button>
-          <button className="w-full bg-red-100 text-red-600 py-2 rounded">🗑️ Delete</button>
+         <button className="w-full bg-gray-100 py-2 rounded flex items-center justify-center gap-2">
+          <LuBellRing />
+          Snooze 2 Weeks
+        </button>
+          <button className="w-full bg-gray-100 py-2 rounded flex items-center justify-center gap-2">
+            <FaArchive/>
+             Archive</button>
+          <button className="w-full bg-gray-100 text-red-600 py-2 rounded flex items-center justify-center gap-2"> 
+            <MdDeleteForever/>
+            Delete</button>
         </div>
 
       </div>
@@ -89,15 +99,15 @@ export default function FriendDetails() {
         {/* Stats */}
         <div className="grid grid-cols-3 gap-4">
           <div className="bg-white p-4 rounded shadow text-center">
-            <h2 className="text-xl font-bold">{friend.days_since_contact}</h2>
+            <h2 className="text-xl font-bold text-[#244D3F]">{friend.days_since_contact}</h2>
             <p className="text-sm text-gray-500">Days</p>
           </div>
           <div className="bg-white p-4 rounded shadow text-center">
-            <h2 className="text-xl font-bold">{friend.goal}</h2>
+            <h2 className="text-xl font-bold text-[#244D3F]">{friend.goal}</h2>
             <p className="text-sm text-gray-500">Goal</p>
           </div>
           <div className="bg-white p-4 rounded shadow text-center">
-            <h2 className="text-xl font-bold">{friend.next_due_date}</h2>
+            <h2 className="text-xl font-bold text-[#244D3F]">{friend.next_due_date}</h2>
             <p className="text-sm text-gray-500">Next Due</p>
           </div>
         </div>
@@ -105,7 +115,7 @@ export default function FriendDetails() {
         {/* Goal */}
         <div className="bg-white p-5 rounded shadow flex justify-between items-center">
           <div>
-            <h3 className="font-semibold">Relationship Goal</h3>
+            <h3 className="font-semibold text-[#244D3F]">Relationship Goal</h3>
             <p className="text-gray-500 text-sm">
               Stay in touch every {friend.goal} days
             </p>
@@ -115,27 +125,28 @@ export default function FriendDetails() {
 
         {/* Quick Actions */}
         <div className="bg-white p-5 rounded shadow">
-          <h3 className="font-semibold mb-3">Quick Check-In</h3>
+          <h3 className="font-semibold mb-3 text-[#244D3F]">Quick Check-In</h3>
 
           <div className="flex gap-4">
 
             <button
-              onClick={() => handleAction("Call")}
-              className="flex-1 bg-green-100 text-green-700 py-2 rounded flex items-center justify-center gap-2"
+            onClick={() => handleAction("Call")}
+            className="flex-1 bg-[#F8FAFC] text-[#1F2937] py-2 rounded flex flex-col items-center justify-center gap-1"
             >
-              <FaPhone /> Call
+            <MdAddCall />
+            <span>Call</span>
             </button>
 
             <button
               onClick={() => handleAction("Text")}
-              className="flex-1 bg-blue-100 text-blue-700 py-2 rounded flex items-center justify-center gap-2"
+              className="flex-1 bg-[#F8FAFC] text-[#1F2937] py-2 rounded flex flex-col items-center justify-center gap-1"
             >
               <FaComment /> Text
             </button>
 
             <button
               onClick={() => handleAction("Video")}
-              className="flex-1 bg-purple-100 text-purple-700 py-2 rounded flex items-center justify-center gap-2"
+              className="flex-1 bg-[#F8FAFC] text-[#1F2937] py-2 rounded flex flex-col items-center justify-center gap-1"
             >
               <FaVideo /> Video
             </button>

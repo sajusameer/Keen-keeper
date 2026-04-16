@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 export default function FriendCard({ friend }) {
   const statusStyle = {
-    "overdue": "bg-red-500 text-white",
-    "almost due": "bg-yellow-400 text-white",
-    "on-track": "bg-green-600 text-white",
+    "overdue": "bg-[#EF4444] text-white",
+    "almost due": "bg-[#EFAD44] text-white",
+    "on-track": "bg-[#244D3F] text-white",
   };
 
   return (
