@@ -11,11 +11,10 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
-    errorElement: <NotFound />,
     children: [
       {
         index: true,
-        element: <Home/>
+        element: <Home />
       },
       {
         path: "timeline",
@@ -30,5 +29,11 @@ export const router = createBrowserRouter([
         element: <FriendDetails />
       }
     ]
+  },
+
+  // 👇 THIS is real 404 route
+  {
+    path: "*",
+    element: <NotFound />
   }
 ]);
