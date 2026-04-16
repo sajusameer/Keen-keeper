@@ -21,8 +21,8 @@ export default function Stats() {
 
     const chartData = [
       { name: "Call", value: counts.Call, fill: "#244D3F" },
-      { name: "Text", value: counts.Text, fill: "#2563eb" },
-      { name: "Video", value: counts.Video, fill: "#9333ea" }
+      { name: "Text", value: counts.Text, fill: "#7600bc" },
+      { name: "Video", value: counts.Video, fill: "#52a447" }
     ];
 
     setData(chartData);
@@ -31,7 +31,7 @@ export default function Stats() {
   return (
     <div className="max-w-4xl mx-auto px-4 mt-10">
 
-      <h1 className="text-2xl font-bold mb-6">
+      <h1 className="text-3xl font-bold mb-6">
         Friendship Analytics
       </h1>
 
@@ -45,14 +45,14 @@ export default function Stats() {
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
 
-              <Pie
+              <Pie 
                 data={data}
                 dataKey="value"
-                innerRadius="60%"     // 🔥 donut style
+                innerRadius="60%"   
                 outerRadius="100%"
-                paddingAngle={5}
-                cornerRadius={10}
-                label
+                paddingAngle={3}
+                cornerRadius={8}
+                
               >
                 {data.map((entry, index) => (
                   <Cell key={index} fill={entry.fill} />
@@ -60,7 +60,7 @@ export default function Stats() {
               </Pie>
 
              
-              <Legend />
+              <Legend iconType="circle"/>
 
             </PieChart>
           </ResponsiveContainer>
