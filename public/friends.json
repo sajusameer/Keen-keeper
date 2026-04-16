@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Alex Johnson",
+    "picture": "https://i.pravatar.cc/150?img=1",
+    "email": "alex.johnson@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["college", "close friend"],
+    "bio": "We met in university. Love hiking and long conversations.",
+    "goal": 14,
+    "next_due_date": "2025-07-20"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Lee",
+    "picture": "https://i.pravatar.cc/150?img=2",
+    "email": "sarah.lee@gmail.com",
+    "days_since_contact": 6,
+    "status": "on-track",
+    "tags": ["work", "team"],
+    "bio": "Colleague from my first job. We still catch up regularly.",
+    "goal": 10,
+    "next_due_date": "2025-07-18"
+  },
+  {
+    "id": 3,
+    "name": "Michael Brown",
+    "picture": "https://i.pravatar.cc/150?img=3",
+    "email": "michael.brown@gmail.com",
+    "days_since_contact": 12,
+    "status": "almost due",
+    "tags": ["gym", "fitness"],
+    "bio": "Gym partner who keeps me motivated every day.",
+    "goal": 14,
+    "next_due_date": "2025-07-16"
+  },
+  {
+    "id": 4,
+    "name": "Emily Davis",
+    "picture": "https://i.pravatar.cc/150?img=4",
+    "email": "emily.davis@gmail.com",
+    "days_since_contact": 20,
+    "status": "overdue",
+    "tags": ["school", "best friend"],
+    "bio": "Childhood best friend. We share unforgettable memories.",
+    "goal": 15,
+    "next_due_date": "2025-07-10"
+  },
+  {
+    "id": 5,
+    "name": "David Wilson",
+    "picture": "https://i.pravatar.cc/150?img=5",
+    "email": "david.wilson@gmail.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["freelance", "client"],
+    "bio": "Client turned into a good friend. Great collaboration.",
+    "goal": 7,
+    "next_due_date": "2025-07-22"
+  },
+  {
+    "id": 6,
+    "name": "Sophia Martinez",
+    "picture": "https://i.pravatar.cc/150?img=6",
+    "email": "sophia.martinez@gmail.com",
+    "days_since_contact": 9,
+    "status": "almost due",
+    "tags": ["travel", "adventure"],
+    "bio": "Met during a trip. We both love exploring new places.",
+    "goal": 10,
+    "next_due_date": "2025-07-17"
+  },
+  {
+    "id": 7,
+    "name": "Daniel Anderson",
+    "picture": "https://i.pravatar.cc/150?img=7",
+    "email": "daniel.anderson@gmail.com",
+    "days_since_contact": 15,
+    "status": "overdue",
+    "tags": ["gaming", "online"],
+    "bio": "Online gaming friend. Still play together weekly.",
+    "goal": 10,
+    "next_due_date": "2025-07-12"
+  },
+  {
+    "id": 8,
+    "name": "Olivia Thomas",
+    "picture": "https://i.pravatar.cc/150?img=8",
+    "email": "olivia.thomas@gmail.com",
+    "days_since_contact": 4,
+    "status": "on-track",
+    "tags": ["neighbor"],
+    "bio": "Neighbor and a supportive friend always nearby.",
+    "goal": 7,
+    "next_due_date": "2025-07-21"
+  },
+  {
+    "id": 9,
+    "name": "James Taylor",
+    "picture": "https://i.pravatar.cc/150?img=9",
+    "email": "james.taylor@gmail.com",
+    "days_since_contact": 11,
+    "status": "almost due",
+    "tags": ["football", "sports"],
+    "bio": "Football buddy. We play every weekend.",
+    "goal": 12,
+    "next_due_date": "2025-07-15"
+  },
+  {
+    "id": 10,
+    "name": "Isabella Moore",
+    "picture": "https://i.pravatar.cc/150?img=10",
+    "email": "isabella.moore@gmail.com",
+    "days_since_contact": 2,
+    "status": "on-track",
+    "tags": ["family", "cousin"],
+    "bio": "My cousin. We stay connected regularly.",
+    "goal": 5,
+    "next_due_date": "2025-07-23"
+  }
+]
