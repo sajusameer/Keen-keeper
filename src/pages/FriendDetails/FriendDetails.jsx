@@ -43,9 +43,9 @@ export default function FriendDetails() {
                     </div>;
 
                 const statusStyle = {
-                    "overdue": "bg-red-500 text-white",
-                    "almost due": "bg-yellow-400 text-white",
-                    "on-track": "bg-green-600 text-white",
+                    "overdue": "bg-[#EF4444] text-white",
+                    "almost due": "bg-[#EFAD44] text-white",
+                    "on-track": "bg-[#244D3F] text-white",
                 };
 
   return (
@@ -79,21 +79,21 @@ export default function FriendDetails() {
 
         {/* Buttons */}
         <div className="mt-4 space-y-2">
-         <button className="w-full bg-gray-100 py-2 rounded flex items-center justify-center gap-2">
+         <button className="w-full bg-white shadow py-2 rounded flex items-center justify-center gap-2">
           <LuBellRing />
           Snooze 2 Weeks
         </button>
-          <button className="w-full bg-gray-100 py-2 rounded flex items-center justify-center gap-2">
+          <button className="w-full bg-white shadow py-2 rounded flex items-center justify-center gap-2">
             <FaArchive/>
              Archive</button>
-          <button className="w-full bg-gray-100 text-red-600 py-2 rounded flex items-center justify-center gap-2"> 
+          <button className="w-full bg-white shadow text-red-600 py-2 rounded flex items-center justify-center gap-2"> 
             <MdDeleteForever/>
             Delete</button>
         </div>
 
       </div>
 
-      {/* RIGHT SIDE */}
+      {/* Right side */}
       <div className="md:col-span-2 space-y-6">
 
         {/* Stats */}
@@ -131,7 +131,7 @@ export default function FriendDetails() {
 
             <button
             onClick={() => handleAction("Call")}
-            className="flex-1 bg-[#F8FAFC] text-[#1F2937] py-2 rounded flex flex-col items-center justify-center gap-1"
+            className="flex-1 bg-[#F8FAFC] text-[#1F2937] py-2 rounded flex flex-col items-center justify-center gap-1 shadow"
             >
             <MdAddCall />
             <span>Call</span>
@@ -139,14 +139,14 @@ export default function FriendDetails() {
 
             <button
               onClick={() => handleAction("Text")}
-              className="flex-1 bg-[#F8FAFC] text-[#1F2937] py-2 rounded flex flex-col items-center justify-center gap-1"
+              className="flex-1 bg-[#F8FAFC] text-[#1F2937] py-2 rounded flex flex-col items-center justify-center gap-1 shadow"
             >
               <FaComment /> Text
             </button>
 
             <button
               onClick={() => handleAction("Video")}
-              className="flex-1 bg-[#F8FAFC] text-[#1F2937] py-2 rounded flex flex-col items-center justify-center gap-1"
+              className="flex-1 bg-[#F8FAFC] text-[#1F2937] py-2 rounded flex flex-col items-center justify-center gap-1 shadow"
             >
               <FaVideo /> Video
             </button>

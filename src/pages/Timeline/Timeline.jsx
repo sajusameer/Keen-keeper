@@ -34,21 +34,18 @@ export default function Timeline() {
       <h1 className="text-2xl font-bold mb-6">Timeline</h1>
 
       {/* Filter Buttons */}
-      <div className="flex gap-3 mb-6 flex-wrap">
-        {["all", "Call", "Text", "Video"].map((type) => (
-          <button
-            key={type}
-            onClick={() => setFilter(type)}
-            className={`px-4 py-1 rounded-full text-sm border ${
-              filter === type
-                ? "bg-green-600 text-white"
-                : "bg-gray-100"
-            }`}
-          >
-            {type}
-          </button>
-        ))}
-      </div>
+     <div className="mb-6">
+        <select
+            value={filter}
+            onChange={(e) => setFilter(e.target.value)}
+            className="w-64 px-4 py-2 border rounded-md bg-gray-100 text-gray-700"
+        >
+            <option value="all">Filter timeline</option>
+            <option value="Call">Call</option>
+            <option value="Text">Text</option>
+            <option value="Video">Video</option>
+        </select>
+     </div>
 
       {/* Timeline List */}
       <div className="space-y-4">
