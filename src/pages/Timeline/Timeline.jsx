@@ -1,7 +1,9 @@
 import React from 'react';
 
 import { useEffect, useState } from "react";
-import { FaPhone, FaComment, FaVideo } from "react-icons/fa";
+import imgCall from "../../assets/call.png"
+import imgText from "../../assets/text.png"
+import imgVideo from "../../assets/video.png"
 
 export default function Timeline() {
   const [timeline, setTimeline] = useState([]);
@@ -20,9 +22,9 @@ export default function Timeline() {
 
   // icon handler
   const getIcon = (type) => {
-    if (type === "Call") return <FaPhone className="text-green-600" />;
-    if (type === "Text") return <FaComment className="text-blue-600" />;
-    if (type === "Video") return <FaVideo className="text-purple-600" />;
+    if (type === "Call") return  <img src={imgCall} alt="" />
+    if (type === "Text") return  <img src={imgText} alt="" />
+    if (type === "Video") return <img src={imgVideo} alt="" />;
   };
 
   return (
